@@ -1,0 +1,70 @@
+/* Sidebar.css */
+
+/* Container for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Styles for the sidebar when it's closed */
+.sidebar.closed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Sidebar content */
+.sidebar .sidebar-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar links */
+.sidebar .sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-content ul li {
+    margin: 15px 0;
+}
+
+.sidebar .sidebar-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar .sidebar-content ul li a:hover {
+    color: #f1f1f1;
+}
+
+/* Sidebar toggle button (for mobile) */
+.sidebar-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar.closed {
+        width: 0;
+    }
+}
